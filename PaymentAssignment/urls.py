@@ -16,7 +16,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from PaymentOperations.views import upload_files
 
 urlpatterns = [
     path('admin/', admin.site.urls),
