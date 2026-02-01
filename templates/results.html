@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconciliation Result</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            background-color: #f9fafb;
+            border-left: 5px solid #007bff;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+
+        li strong {
+            color: #333;
+        }
+
+        .highlight {
+            border-left-color: #28a745;
+            background-color: #f1fdf5;
+        }
+
+        .warning {
+            border-left-color: #dc3545;
+            background-color: #fff5f5;
+        }
+
+        .info {
+            border-left-color: #17a2b8;
+            background-color: #f2fbfd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Reconciliation Summary</h2>
+
+        <ul>
+            <li class="highlight">
+                <span>Present in Both</span>
+                <strong>{{ present_in_both_count }}</strong>
+            </li>
+
+            <li class="warning">
+                <span>Present in Settlement File but not in Partner Statement</span>
+                <strong>{{ only_in_settlement_count }}</strong>
+            </li>
+
+            <li class="warning">
+                <span>Present in Partner Statement but not in Settlement File</span>
+                <strong>{{ only_in_statement_count }}</strong>
+            </li>
+
+            <li class="info">
+                <span>Amount Match Count (Present in Both)</span>
+                <strong>{{ amount_match_count }}</strong>
+            </li>
+
+            <li class="warning">
+                <span>Variance</span>
+                <strong>{{ variance_count }}</strong>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
