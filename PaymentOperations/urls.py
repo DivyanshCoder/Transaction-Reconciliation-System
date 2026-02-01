@@ -3,5 +3,5 @@ from . import views
 from django.http import HttpResponse
 
 urlpatterns = [
-    path("", views.upload_files, name="upload_files"),
+    path('', views.upload_files, name="upload_files"),
 ]

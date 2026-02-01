@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-vv6q%i-n)2$6i_(q!@41fv683(ydd*ml+j$518^drka&5lbma2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["transaction-reconciliation-system.onrender.com", "127.0.0.1", 'localhost']
 
 
 # Application definition
